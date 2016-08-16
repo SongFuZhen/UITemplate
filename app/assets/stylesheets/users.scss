@@ -1,0 +1,60 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Profile
+.tab-content{
+	#profile{
+		padding: 10px;
+		.profile-log{
+			p{
+				padding: 10px;
+				color: white;
+				background: #27AE60;
+			}
+		}
+	}
+}
+
+.users-block{
+	background: #3498DB;
+	height: 130px;
+	color:white;
+	.users-info{
+		height: 80%;
+		display: table;
+		.users-nickname{
+			width: 70%;
+			display: table-cell;
+			font-size: 1.3em;
+			text-align: center;
+			vertical-align: middle;
+			border-right: 1px solid #f2f2f2;
+			img{
+				border-radius:40px;
+				width: 80px;
+				height: 80px;
+			}
+		}
+		.users-details{
+			display: table-cell;
+			font-size: .9em;
+			padding:10px;
+			hr{
+				margin: 10px -10px;
+			}
+		}
+	}
+	.users-footer{
+		height: 20%;
+		background: #2980B9;
+		vertical-align: middle;
+		padding:4px;
+	}
+}
+
+
+
+
+
+

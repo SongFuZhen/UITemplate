@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestSass</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <style>
+    @font-face {
+      font-family: 'arialregular';
+      src: url('/assets/arial/arial-webfont.woff2') format('woff2'),
+           url('/assets/arial/arial-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  </head>
+
+  <body style="background: #BDC3C7;font-family:arialregular;">
+
+    <div class="main">
+      <div class="main-nav">
+        <ul>
+          <li class="nav-bar">
+            <a style="opacity:.4;">
+              <i class="fa fa-mortar-board"></i>
+            </a>
+          </li>
+          <li class="nav-active nav-bar">
+            <%= link_to content_tag(:i, '', :class=>'glyphicon glyphicon-user'), users_path %>
+            Marco
+          </li>
+
+          <li  class="nav-bar">
+            <%= link_to content_tag(:i, '', :class=>'fa fa-table'),tables_path %>
+            Table
+          </li>
+          <li  class="nav-bar">
+             <%= link_to content_tag(:i, '', :class=>'fa fa-columns'),panels_path %>
+            Panel
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <%= yield %>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+<script type="text/javascript">
+  var pathname = window.location.pathname.split("/")[1];
+  $('.nav-bar').removeClass("nav-active");
+
+  switch(pathname){
+    case "users":
+      $('.nav-bar').first().next().addClass("nav-active");
+    break;
+    case "tables":
+      $('.nav-bar').first().next().next().addClass("nav-active");
+    break;
+    case "panels":
+      $('.nav-bar').first().next().next().next().addClass("nav-active");
+    break;
+    case "Others":
+      $('.nav-bar').first().next().next().next().next().addClass("nav-active");
+    break;
+  }
+</script>

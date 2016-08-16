@@ -1,0 +1,253 @@
+<div class="marco-tabs">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#normal_table" data-toggle="tab" aria-expanded ="false">简单表格</a>
+    </li>
+
+    <li>
+      <a href="#usual_table" data-toggle="tab" aria-expanded = "true">普通表格</a>
+    </li>
+
+    <li>
+      <a href="#advanced_table" data-toggle="tab" aria-expanded = "true">高级表格</a>
+    </li>
+  </ul>
+</div>
+
+<div class="tab-content">
+ <div id="normal_table" class="tab-pane active">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="table-heading">
+        Project
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Project</th>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% for i in 1..6 do %>
+          <tr>
+            <td>
+              <input type="radio" name="radio1">
+            </td>
+            <td><%= ('a'..'z').to_a.shuffle[0..7].join %></td>
+            <td><%=rand(0..10) %>C</td>
+            <td>2016-0<%=rand(1..9) %>-<%=rand(10..30) %></td>
+            <td>
+              <i class="fa fa-check"></i>
+              <i class="fa fa-close"></i>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="table-heading-radius">
+        Project 
+        <label class="label label-info">has radius</label>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox">
+            </th>
+            <th>Project</th>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% for i in 1..6 do %>
+          <tr>
+            <td>
+              <input type="checkbox">
+            </td>
+            <td><%= ('a'..'z').to_a.shuffle[0..7].join %></td>
+            <td><%=rand(10..60) %>C</td>
+            <td>2016-0<%=rand(1..9) %>-<%=rand(10..30) %></td>
+            <td>
+              <i class="fa fa-check"></i>
+              <i class="fa fa-close"></i>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="table-heading">
+        Project
+        <div class="pull-right">
+          <label class="label label-danger">
+            6 Left
+          </label>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox">
+            </th>
+            <th>Project</th>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% for i in 1..6 do %>
+          <tr>
+            <td>
+              <input type="checkbox">
+            </td>
+            <td><%= ('a'..'z').to_a.shuffle[0..7].join %></td>
+            <td><%=rand(10..60) %>C</td>
+            <td>2016-0<%=rand(1..9) %>-<%=rand(10..30) %></td>
+            <td>
+              <i class="fa fa-check"></i>
+              <i class="fa fa-close"></i>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="table-heading-radius">
+        Project
+        <div class="pull-right">
+          <i class="fa fa-arrows-v" style="transform: rotate(45deg); color: #3498DB;"></i>
+
+          <i class="fa fa-refresh" style="color: #27AE60;"></i>
+
+          <i class="fa fa-cog fa-spin"></i>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Project</th>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% for i in 1..6 do %>
+          <tr>
+            <td>
+              <input type="radio" name="radio4">
+            </td>
+            <td><%= ('a'..'z').to_a.shuffle[0..7].join %></td>
+            <td><%=rand(10..60) %>C</td>
+            <td>2016-0<%=rand(1..9) %>-<%=rand(10..30) %></td>
+            <td>
+              <i class="fa fa-check"></i>
+              <i class="fa fa-close"></i>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="usual_table" class="tab-pane">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="usual-table">
+        <div class="table-heading">
+          Project
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Project</th>
+              <th>Task</th>
+              <th>Date</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% for i in 1..6 do %>
+            <tr>
+              <td>
+                <input type="radio" name="radio1">
+              </td>
+              <td><%= ('A'..'Z').to_a.shuffle[0..4].join %></td>
+              <td><%=rand(0..10) %>C</td>
+              <td>2016-0<%=rand(4..9) %>-<%=rand(10..30) %></td>
+              <td>
+                <i class="fa fa-check"></i>
+                <i class="fa fa-close"></i>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="usual-table">
+        <div class="table-heading">
+          Project
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <i class="fa fa-bullhorn"></i>
+                Project
+              </th>
+              <th>Task</th>
+              <th>Date</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% for i in 1..6 do %>
+            <tr>
+              <td>
+                <input type="checkbox">
+              </td>
+              <td><%= ('A'..'Z').to_a.shuffle[0..4].join %></td>
+              <td><%=rand(0..10) %>C</td>
+              <td>2016-0<%=rand(4..9) %>-<%=rand(10..30) %></td>
+              <td>
+                <i class="fa fa-check"></i>
+                <i class="fa fa-close"></i>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="advanced_table" class="tab-pane">
+    高级
+  </div>
+</div>

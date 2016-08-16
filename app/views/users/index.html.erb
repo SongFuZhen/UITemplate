@@ -1,0 +1,124 @@
+<div class="marco-tabs">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#profile" data-toggle="tab" aria-expanded ="false">Marco</a>
+    </li>
+
+    <li>
+      <a href="#users" data-toggle="tab" aria-expanded = "true">用户</a>
+    </li>
+  </ul>
+</div>
+
+<div class="tab-content">
+  <div id="profile" class="tab-pane active">
+    <!-- 块状显示 -->
+    <div class="block-panel">
+      <div class="block-heading">
+        Marco 的个人资料
+      </div>
+      <div class="block-body">
+        <div class="row">
+          
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="margin-bottom:10px;">
+            <div class="block-panel">
+              <div class="block-heading">
+                个性签名            
+              </div>
+              <div class="block-body">
+                如果你正在处于低谷，那就大胆的往前走。因为无论怎么走，都是在向上。
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 ol-sm-6 col-xs-12" style="margin-bottom:10px;">
+             <div class="block-panel">
+              <div class="block-heading">
+                个人信息   
+              </div>
+              <div class="block-body">
+              <div class="minput-group">
+                  <span>注册</span>
+                  <input type="text" value="2016年8月9日 9时23分23秒" disabled>
+                </div>
+
+                <div class="minput-group" style="margin-top:10px;">
+                  <span>ID</span>
+                  <input type="text" value="11071125" disabled >
+                </div>
+ 
+                <div class="minput-group" style="margin-top:10px;">
+                  <span>昵称</span>
+                  <input type="text" value="Marco">
+                </div>
+
+                 <div class="minput-group" style="margin-top:10px;">
+                  <span>邮箱</span>
+                  <input type="text" value="evil_song@126.com">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 ol-sm-6 col-xs-12" style="margin-bottom:10px;">
+             <div class="block-panel">
+              <div class="block-heading">
+                日志            
+              </div>
+              <div class="block-body profile-log">
+                <p style="background:#C0392B;">2016年8月9日 9时27分03秒 删除用户</p>
+
+                <p style="background:#F39C12;">2016年8月9日 9时26分43秒 修改密码</p>
+
+                <p style="background:#7F8C8D;">2016年8月9日 9时25分53秒 修改个人资料</p>
+
+                <p style="background:#8E44AD;">2016年8月9日 9时25分33秒 加入项目</p>
+
+                <p style="background:#34495E;">2016年8月9日 9时24分44秒 接受邀请</p>
+
+                <p style="background:#2980B9;">2016年8月9日 9时24分29秒 登陆成功</p>
+
+                <p style="background:#27AE60;">2016年8月9日 9时23分23秒 注册成功</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="users" class="tab-pane">
+    <% @users.each do |user| %>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin-top:20px;">
+        <div class="users-block">
+          <div class="users-info">
+            <div class="users-nickname">
+              <img src="/assets/headshot/2.jpg" alt="Picture">
+              <%= user.name %>
+            </div>
+
+            <div class="users-details">
+              <div class="users-role">
+                <%= user.role %>
+              </div>
+              <hr />
+              <div class="users-phone">
+                13918057179
+              </div>
+              <hr />
+              <div class="users-emails">
+                evil_song@126.com
+              </div>
+            </div>
+          </div>
+
+          <div class="users-footer">
+            <marquee behavior="scroll" direction="left">
+              <%= user.remark %>   
+            </marquee>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
