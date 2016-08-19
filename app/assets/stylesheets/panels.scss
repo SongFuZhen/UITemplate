@@ -1,3 +1,73 @@
 // Place all the styles related to the panels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin panel-head {
+  height: 40px;
+  line-height: 30px;
+  padding: 5px;
+  font-size: 1.3em;
+  background: #3498DB;
+  color: white;
+}
+
+.normal-panel {
+  margin-top: 10px;
+  border: 2px solid #3498DB;
+  .normal-heading {
+    @include panel-head;
+  }
+  .normal-body {
+    display: flex;
+    background: white;
+    .body-left {
+      padding: 10px;
+      border-right: 2px solid #3498DB;
+      img {
+        border: 1px solid #999;
+        width: 80px;
+        height: 80px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+      }
+    }
+    .body-right {
+      width: 80%;
+      padding: 10px;
+      span {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+@mixin marco-task {
+  display: flex;
+  margin-top: 5px;
+  border: 2px solid #3498DB;
+  input[type="checkbox"] {
+    margin: 8px;
+  }
+  b {
+    padding-left: 5px;
+    border-left: 2px solid #3498DB;
+    font-size: 11px;
+    line-height: 30px;
+  }
+}
+
+.usual-panel {
+  margin-top: 10px;
+  border: 2px solid #3498DB;
+  .usual-heading {
+    @include panel-head;
+  }
+  .usual-body {
+    padding: 10px;
+    background: white;
+    .marco-task {
+      @include marco-task;
+    }
+  }
+}
